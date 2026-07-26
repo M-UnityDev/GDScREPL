@@ -45,8 +45,8 @@ func _ready() -> void:
 		get_tree().quit(0)
 		return
 	var GODOT_VERSION := str(Engine.get_version_info()["major"]) + "." + str(Engine.get_version_info()["minor"]) + "." + str(Engine.get_version_info()["patch"])
-	print("GDScript " + GODOT_VERSION + " (" + Time.get_date_string_from_system(true) + " " + Time.get_time_string_from_system(true) + ") on " + OS.get_name() + 
-			"\nType \"help\" for more information.")
+	var DATE_TIME := str(" (" + Time.get_date_string_from_system(true) + " " + Time.get_time_string_from_system(true) + ") ")
+	print("GDScript " + GODOT_VERSION + DATE_TIME + "on " + OS.get_name() + "\nType \"help\" for more information.")
 	while(true):
 		printraw(colors.LIGHT_BLUE + ">>> " + colors.END)
 		temp_line = OS.read_string_from_stdin()
